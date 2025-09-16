@@ -8,6 +8,9 @@ RM = rm -f
 RMDIR = rm -rf
 !ENDIF
 
+install:
+	pip install .
+
 build:
 	$(PYTHON) setup.py build_ext --inplace
 

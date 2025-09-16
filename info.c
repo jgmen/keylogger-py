@@ -1,23 +1,10 @@
+#define PY_SSIZE_T_CLEAN
 #include <Python.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdarg.h>
-
-/* Todo implement windows_info and linux_info in separate modules */
-
-#ifdef _WIN32
 #include <windows.h>
-// #include "windows_info.h" 
-#pragma comment(lib, "ws2_32.lib")
-#define p_vscprintf(fmt, args) _vscprintf(fmt, args)
-#else
-// #include "linux_info.h"
-static int p_vscprintf(const char* fmt, va_list args) {
-    return vsnprintf(NULL, 0, fmt, args);
-}
-#endif
+#pragma comment(lib, "Advapi32.lib")
+#pragma comment(lib, "Ws2_32.lib")
 
+#define p_vscprintf(fmt, args) _vscprintf(fmt, args)
 
 /* Silly macro to avoid repetition */
 #define APPEND_AND_FREE(info, func)              \
