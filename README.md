@@ -4,7 +4,9 @@
 > I am **not responsible** for any misuse of this code. Do **not use** it to capture data from others without permission.
 
 ---
-<img width="512" height="512" alt="logo" src="https://github.com/user-attachments/assets/ab405688-7c34-477a-a03c-192df375d5e6" />
+<div align="center">
+  <img width="512" height="512" alt="logo" src="https://github.com/user-attachments/assets/ab405688-7c34-477a-a03c-192df375d5e6" />
+</div>
 
 ## Description
 
